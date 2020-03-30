@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PoloMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-tD-KRi">
+                                <rect key="frame" x="20" y="138" width="374" height="694"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-2s-SIq">
+                                <rect key="frame" x="20" y="74" width="251" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-pg-t22">
+                                <rect key="frame" x="291" y="74" width="103" height="34"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="cGi-40-IdB"/>
+                                    <constraint firstAttribute="height" constant="34" id="rMY-Lv-A5N"/>
+                                </constraints>
+                                <state key="normal" title="Get direction"/>
+                                <connections>
+                                    <action selector="getDirectionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cma-ov-P1R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iy8-tD-KRi" firstAttribute="top" secondItem="0vw-2s-SIq" secondAttribute="bottom" constant="30" id="3NV-gV-T6d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iy8-tD-KRi" secondAttribute="trailing" constant="20" id="B8S-N8-vQI"/>
+                            <constraint firstItem="0vw-2s-SIq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="DjW-5z-Sms"/>
+                            <constraint firstItem="0vw-2s-SIq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JkS-4j-csr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Iy8-tD-KRi" secondAttribute="bottom" constant="30" id="NI9-o4-Tcj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tKa-pg-t22" secondAttribute="trailing" constant="20" id="f3P-fo-Lg8"/>
+                            <constraint firstItem="tKa-pg-t22" firstAttribute="leading" secondItem="0vw-2s-SIq" secondAttribute="trailing" constant="20" id="lGo-ei-urq"/>
+                            <constraint firstItem="Iy8-tD-KRi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oA2-Hg-iZo"/>
+                            <constraint firstItem="tKa-pg-t22" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="vJ3-zh-DYX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="getDirectionsButton" destination="tKa-pg-t22" id="vrJ-c7-due"/>
+                        <outlet property="map" destination="Iy8-tD-KRi" id="Eyt-7f-ECG"/>
+                        <outlet property="textFieldForAddress" destination="0vw-2s-SIq" id="YAM-Wt-Gax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
