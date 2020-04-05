@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="103" id="cGi-40-IdB"/>
                                     <constraint firstAttribute="height" constant="34" id="rMY-Lv-A5N"/>
                                 </constraints>
-                                <state key="normal" title="Get direction"/>
+                                <state key="normal" title="Rechercher"/>
                                 <connections>
                                     <action selector="getDirectionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cma-ov-P1R"/>
                                 </connections>

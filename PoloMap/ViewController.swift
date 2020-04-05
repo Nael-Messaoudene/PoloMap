@@ -68,10 +68,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     print("No location found")
                     return
             }
-            print(location)
-            
-            print("eeeeeeeeeeeeeeee")
-            print(location.coordinate)
+    
             self.mapThis(destinationCoord: location.coordinate)
         }
     }
@@ -100,6 +97,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         let pin = MKPlacemark(coordinate: destinationCoord, addressDictionary: address)
          let coordinateRegion = MKCoordinateRegion(center: pin.coordinate, latitudinalMeters: 800, longitudinalMeters: 800)
+
         map.addAnnotation(pin)
         
         
@@ -137,7 +135,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
         render.strokeColor = .blue
         
-        print(render)
         return render
     }
     
